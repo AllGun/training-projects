@@ -4,4 +4,21 @@ const addressInput = document.querySelector("#address");
 const cityInput = document.querySelector("#city");
 const neighborhoodInput = document.querySelector("#neighborhood");
 const regionInput = document.querySelector("#region");
-const formInputs = document.querySelector("[data-input]");
+const formInputs = document.querySelectorAll("[data-input]");
+
+const closeButton = document.querySelector("#close-message");
+
+//Validate CEP input
+cepInput.addEventListener("keypress", (e) => {
+    const onlyNumbers = /[0-9]|\./;
+    const key = String.fromCharCode(e.keyCode);
+
+    console.log(key);
+    console.log(onlyNumbers.test(key));
+
+    // allow only numbers
+    if (!onlyNumbers.test(key)) {
+        e.preventDefault();
+        return;
+    }
+});
