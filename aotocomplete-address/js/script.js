@@ -33,4 +33,15 @@ cepInput.addEventListener("keyup", (e) => {
 // Get customer address from API
 const getAddress = async (cep) => {
     console.log(cep);
+    toggleLoader();
 };
+
+// Show or hide loader
+const toggleLoader = () => {
+    const fadeElement = document.querySelector("#fade");
+    const loaderElement = document.querySelector("#loader");
+
+    fadeElement.classList.toggle("hide");
+    loaderElement.classList.toggle("hide");
+
+}
