@@ -13,14 +13,12 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
-
     <!-- Bootstrap Icons -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
     />
-
-    <script src="./js/script.js"></script>
+    <script src="./js/script.js" defer></script>
   </head>
   <body id="checkout-page">
     <div id="fade" class="hide">
@@ -31,15 +29,14 @@
         <div class="alert alert-light" role="alert">
           <h4>Mensagem:</h4>
           <p>Texto da mensagem!</p>
-          <button id="clonse-message" type="button" class="btn btn-secondary">
+          <button id="close-message" type="button" class="btn btn-secondary">
             Fechar
           </button>
         </div>
       </div>
     </div>
-
-    <div id="order-form-container" class="container px-md-0">
-      <div id="steps" class="mb-3 pb-mb-3">
+    <div id="order-form-container" class="container p-6 my-md-4 px-md-0">
+      <div id="steps" class="mb-md-3 pb-mb-3">
         <div class="line"></div>
         <div class="step">
           <i class="bi bi-person active"></i>
@@ -70,13 +67,12 @@
               minlength="8"
               maxlength="8"
               required
-              data-input
             />
             <label for="cep">Digite o seu CEP</label>
           </div>
         </div>
         <div class="row mb-3">
-          <div class="form-floating col-12 col-sm-6 mb-3 mb-sm-0">
+          <div class="col-12 col-sm-6 mb-3 mb-sm-0 form-floating">
             <input
               type="text"
               class="form-control shadow-none"
@@ -89,7 +85,6 @@
             />
             <label for="address">Rua</label>
           </div>
-
           <div class="form-floating col-12 col-sm-6 mb-3 mb-sm-0">
             <input
               type="text"
@@ -117,7 +112,6 @@
             />
             <label for="address">Complemento</label>
           </div>
-
           <div class="form-floating col-12 col-sm-6 mb-3 mb-sm-0">
             <input
               type="text"
@@ -129,7 +123,7 @@
               required
               data-input
             />
-            <label for="number">Bairro</label>
+            <label for="neighborhood">Bairro</label>
           </div>
         </div>
         <div class="row mb-3">
@@ -144,12 +138,10 @@
               required
               data-input
             />
-            <label for="address">Cidade</label>
+            <label for="city">Cidade</label>
           </div>
-
-          <div class="form-floating col-12 col-sm-6 mb-3 mb-sm-0">
+          <div class="col-12 col-sm-6 mb-3 mb-sm-0">
             <select
-              name="region"
               id="region"
               class="form-select shadow-none"
               disabled
@@ -158,19 +150,41 @@
             >
               <option selected>Estado</option>
               <option value="AC">Acre</option>
-              <option value="AC">Acre</option>
-              <option value="AC">Acre</option>
-              <option value="AC">Acre</option>
-              <option value="AC">Acre</option>
-              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AC">Amapá</option>
+              <option value="AC">Amazonas</option>
+              <option value="AC">Bahia</option>
+              <option value="AC">Ceará</option>
+              <option value="AC">Distrito Federal</option>
+              <option value="AC">Espírito Santo</option>
+              <option value="AC">Goiás</option>
+              <option value="AC">Maranhão</option>
+              <option value="AC">Mato Grosso</option>
+              <option value="AC">Mato Grosso do Sul</option>
+              <option value="AC">Minas Gerais</option>
+              <option value="AC">Pará</option>
+              <option value="AC">Paraíba</option>
+              <option value="AC">Pananá</option>
+              <option value="AC">Pernambuco</option>
+              <option value="AC">Piauí</option>
+              <option value="AC">Rio de Janeiro</option>
+              <option value="AC">Rio Grande do Norte</option>
+              <option value="AC">Rio Grande do Sul</option>
+              <option value="AC">Rondônia</option>
+              <option value="AC">Roraima</option>
+              <option value="AC">Santa Catarina</option>
+              <option value="AC">São Paulo</option>
+              <option value="AC">Sergipe</option>
+              <option value="AC">Tocantins</option>
             </select>
           </div>
         </div>
         <div class="d-flex justify-content-end">
-          <button id="save-btn" type="submit" class="btn btn-primary">Cadastrar</button>
+          <button id="save-btn" type="submit" class="btn btn-primary">
+            Cadastrar
+          </button>
         </div>
       </form>
     </div>
-    <!-- </div> -->
   </body>
 </html>

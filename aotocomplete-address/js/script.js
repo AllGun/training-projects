@@ -10,11 +10,8 @@ const closeButton = document.querySelector("#close-message");
 
 //Validate CEP input
 cepInput.addEventListener("keypress", (e) => {
-    const onlyNumbers = /[0-9]|\./;
+    const onlyNumbers = /[0-9]/;
     const key = String.fromCharCode(e.keyCode);
-
-    console.log(key);
-    console.log(onlyNumbers.test(key));
 
     // allow only numbers
     if (!onlyNumbers.test(key)) {
@@ -22,3 +19,6 @@ cepInput.addEventListener("keypress", (e) => {
         return;
     }
 });
+
+// Get address event
+cepInput.addEventListener("keyup", )
