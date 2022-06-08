@@ -55,10 +55,8 @@ const getAddress = async (cep) => {
     addressInput.value = data.logradouro;
     cityInput.value = data.localidade;
     neighborhoodInput.value = data.bairro;
+    regionInput.value = data.uf;
     
-    
-   
-
     toggleLoader();
 };
 
