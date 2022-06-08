@@ -103,3 +103,21 @@ const toggleMessage = (msg) => {
 
 // Close mesage modal
 closeButton.addEventListener("click", () => toggleMessage());
+
+// Save address
+addressForm.addEventListener("submit", (e) => {
+
+    e.preventDefault();
+
+    toggleLoader();
+
+    setTimeout(() => {
+
+        toggleLoader();
+
+        toggleMessage("Endereço salvo com sucesso");
+
+        addressForm.reset();
+        toggleDisabled();
+    }, 1500)
+})
