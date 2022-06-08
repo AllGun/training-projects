@@ -8,6 +8,8 @@ const formInputs = document.querySelectorAll("[data-input]");
 
 const closeButton = document.querySelector("#close-message");
 
+const fadeElement = document.querySelector("#fade");
+
 //Validate CEP input
 cepInput.addEventListener("keypress", (e) => {
   const onlyNumbers = /[0-9]/;
@@ -32,16 +34,45 @@ cepInput.addEventListener("keyup", (e) => {
 
 // Get customer address from API
 const getAddress = async (cep) => {
-    console.log(cep);
     toggleLoader();
+
+    cepInput.blur();
+
+    const apiUrl = `https://viacep.com.br/ws/${cep}/json/`
+
+    const response = await fetch(apiUrl);
+
+    const data = await response.json();
+
+    // Show error and reset form
+    if(data.erro == "true"){
+        addressForm.reset();
+        toggleLoader();
+        toggleMessage("CEP inválido, tente novamente.");
+        return;
+    }
 };
 
 // Show or hide loader
 const toggleLoader = () => {
-    const fadeElement = document.querySelector("#fade");
     const loaderElement = document.querySelector("#loader");
 
     fadeElement.classList.toggle("hide");
     loaderElement.classList.toggle("hide");
+};
+
+// Show or hide message
+const toggleMessage = (msg) => {
+
+    const messageElement = document.querySelector("#message")
+
+    const messageElementText = document.querySelector("#message p");
+    
+    messageElementText.innerText = msg;
+
+    fadeElement.classList.toggle("hide");
+    messageElement.classList.toggle("hide");
+
+
 
 }
