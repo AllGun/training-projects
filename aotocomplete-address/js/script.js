@@ -45,20 +45,41 @@ const getAddress = async (cep) => {
     const data = await response.json();
 
     // Show error and reset form
-    if(data.erro == "true"){
+    if(data.erro === "true") {
+        if (!addressInput.hasAttribute("disabled")) {
+            toggleDisabled();
+        }
+
         addressForm.reset();
         toggleLoader();
-        toggleMessage("CEP inválido, tente novamente.");
+        toggleMessage("Insira um CEP válido");
         return;
+    }
+
+    if (addressInput.value === "") {
+        toggleDisabled();
     }
 
     addressInput.value = data.logradouro;
     cityInput.value = data.localidade;
     neighborhoodInput.value = data.bairro;
     regionInput.value = data.uf;
-    
+
     toggleLoader();
 };
+
+// Add or remove disabled atribute
+const toggleDisabled = () => {
+    if (regionInput.hasAttribute("disabled")) {
+        formInputs.forEach((input) => {
+            input.removeAttribute("disabled");
+        });
+    } else {
+        formInputs.forEach((input) => {
+            input.setAttribute("disabled", "disabled");
+        });
+    }
+}
 
 // Show or hide loader
 const toggleLoader = () => {
