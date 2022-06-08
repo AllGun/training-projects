@@ -51,6 +51,11 @@ const getAddress = async (cep) => {
         toggleMessage("CEP inválido, tente novamente.");
         return;
     }
+
+    addressInput.value = data.logradouro;
+   
+
+    toggleLoader();
 };
 
 // Show or hide loader
@@ -63,7 +68,6 @@ const toggleLoader = () => {
 
 // Show or hide message
 const toggleMessage = (msg) => {
-
     const messageElement = document.querySelector("#message")
 
     const messageElementText = document.querySelector("#message p");
@@ -72,7 +76,7 @@ const toggleMessage = (msg) => {
 
     fadeElement.classList.toggle("hide");
     messageElement.classList.toggle("hide");
+};
 
-
-
-}
+// Close mesage modal
+closeButton.addEventListener("click", () => toggleMessage());
