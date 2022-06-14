@@ -101,7 +101,7 @@ const toggleMessage = (msg) => {
     messageElement.classList.toggle("hide");
 };
 
-// Close mesage modal
+// Close message modal
 closeButton.addEventListener("click", () => toggleMessage());
 
 // Save address
