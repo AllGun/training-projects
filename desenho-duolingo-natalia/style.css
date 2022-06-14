@@ -29,6 +29,13 @@ body {
   filter: brightness(0.75);
 }
 
+.folha-1 {
+  background-color: #99cc3f;
+  margin: 0 auto;
+  transform: scale(0.9) rotate(-45deg) translate(-15%, -10%);
+  filter: brightness(0.8);
+}
+
 
 
 .caule {
