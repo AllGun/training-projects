@@ -60,7 +60,14 @@ body {
   filter: brightness(0.45);
 }
 
+.folha-5 {
+  background-color: #53a400;
 
+  position: absolute;
+  right: 0;
+  transform: scale(1) translate(-110%, -65%);
+  filter: brightness(0.8);
+}
 
 .caule {
   background: rgb(108, 61, 27);
