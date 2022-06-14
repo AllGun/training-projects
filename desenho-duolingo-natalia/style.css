@@ -43,6 +43,14 @@ body {
   filter: brightness(0.65);
 }
 
+.folha-3 {
+  background-color: #a8cb58;
+  position: absolute;
+  transform: scale(0.9) rotateY(180deg) rotate(10deg) translate(-110%, -40%);
+  filter: brightness(0.65);
+  filter: brightness(1);
+}
+
 
 
 .caule {
