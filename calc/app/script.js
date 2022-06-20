@@ -11,7 +11,13 @@ class Calculator {
 
     // add digit to calculator screen
     addDigit(digit) {
-        console.log(digit);
+        this.currentOperation = digit;
+        this.updateScreen();
+    }
+
+    //Change values of the calculator screen
+    updateScreen() {
+        
     }
 }
 
