@@ -20,6 +20,8 @@ class Calculator {
         this.updateScreen();
     }
 
+// Process all calculator operations
+
     //Change values of the calculator screen
     updateScreen() {
         this.currentOperationText.innerText += this.currentOperation;
