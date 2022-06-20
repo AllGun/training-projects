@@ -11,13 +11,18 @@ class Calculator {
 
     // add digit to calculator screen
     addDigit(digit) {
+        // Check if current operation already has a dot
+        if(digit === "." && this.currentOperationText.innerText.includes(".")) {
+            return;
+        }
+
         this.currentOperation = digit;
         this.updateScreen();
     }
 
     //Change values of the calculator screen
     updateScreen() {
-        
+        this.currentOperationText.innerText += this.currentOperation;
     }
 }
 
