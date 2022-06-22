@@ -23,10 +23,12 @@ class Calculator {
   // Process all calculator operations
   processOperation(operation) {
     //check if current is empty
-    if (this.currentOperationText.innerText === "") {
-        if (this.previousOperationText.innerText !== "") {
-        }
-        return;
+    if (this.currentOperationText.innerText === "" && operation !== "C") {
+      //Change operation
+      if (this.previousOperationText.innerText !== "") {
+        this.chageOperation(operation);
+      }
+      return;
     }
 
     //get current and previous value
@@ -39,18 +41,29 @@ class Calculator {
         operationValue = previous + current;
         this.updateScreen(operationValue, operation, current, previous);
         break;
-        case "-":
+      case "-":
         operationValue = previous - current;
         this.updateScreen(operationValue, operation, current, previous);
         break;
-        case "*":
+      case "*":
         operationValue = previous * current;
         this.updateScreen(operationValue, operation, current, previous);
         break;
-        case "/":
+      case "/":
         operationValue = previous / current;
         this.updateScreen(operationValue, operation, current, previous);
         break;
+      case "DEL":
+        this.processDelOperator();
+        break;
+      case "CE":
+        this.processClearCurrentOperation();
+        break;
+      case "C":
+        this.processClearOperation();
+        break;
+        case "=":
+        this.processEqualOperator();
       default:
         return;
     }
@@ -63,19 +76,52 @@ class Calculator {
     current = null,
     previous = null
   ) {
-      
-      if(operationValue === null) {
-        this.currentOperationText.innerText += this.currentOperation;
+    if (operationValue === null) {
+      this.currentOperationText.innerText += this.currentOperation;
     } else {
-        // Check if value is zero, if it is just add current value
-        if(previous === 0) {
-            operationValue = current
-        }
+      // Check if value is zero, if it is just add current value
+      if (previous === 0) {
+        operationValue = current;
+      }
 
-        // Add current value to previous
-        this.previousOperationText.innerText = `${operationValue} ${operation}`
-        this.currentOperationText.innerText = "";
+      // Add current value to previous
+      this.previousOperationText.innerText = `${operationValue} ${operation}`;
+      this.currentOperationText.innerText = "";
     }
+  }
+
+  // Change math operation
+  chageOperation(operation) {
+    const mathOperations = ["*", "/", "+", "-"];
+
+    if (!mathOperations.includes(operation)) {
+      return;
+    }
+
+    this.previousOperationText.innerText =
+      this.previousOperationText.innerText.slice(0, -1) + operation;
+  }
+  // Delete the last digit
+  processDelOperator() {
+    this.currentOperationText.innerText =
+      this.currentOperationText.innerText.slice(0, -1);
+  }
+
+  // Clear current Operation
+  processClearCurrentOperation() {
+    this.currentOperationText.innerText = "";
+  }
+
+  // Clear All operations
+  processClearOperation() {
+    this.currentOperationText.innerText = "";
+    this.previousOperationText.innerText = "";
+  }
+
+  // Equal
+  processEqualOperator() {
+    const operation = previousOperationText.innerText.split(" ")[1];
+    this.processOperation(operation);
   }
 }
 
