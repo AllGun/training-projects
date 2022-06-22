@@ -7,20 +7,22 @@
     <title>Stopwatch</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="./app/script.js"></script>
+    <script src="./app/script.js" defer></script>
   </head>
   <body>
     <main>
       <div class="cronometro">
         <img
-          src="./img/cronometro-11563343836uh6fd0llyq-removebg-preview.png"
+          src="./img/208-2085446_stopwatch-coloring-page-cronômetro-para-colorir-removebg-preview.png"
           alt=""
         />
+        
         <span>0.0</span>
+        <div id="sss"></div>
       </div>
       <div class="btns">
         <button id="btnStart"><i class="bi bi-play-btn"></i></button>
-        <button id="btnPause"><i class="bi bi-pause-btn"></i></button>
+        <button id="btnPause" disabled><i class="bi bi-pause-btn"></i></button>
         <button id="btnClean"><i class="bi bi-stop-btn"></i></i></button>
       </div>
     </main>
