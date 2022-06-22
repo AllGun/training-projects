@@ -25,3 +25,10 @@ btnPause.onclick = () => {
     clearInterval(interval);
 }
 
+btnClean.onclick = () => {
+    btnStart.disabled = false;
+    btnPause.disabled = true;
+
+    clearInterval(interval);
+    span.innerHTML = "0.0"
+}
