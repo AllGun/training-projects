@@ -1,11 +1,12 @@
 body {
-    background-color: rgb(141, 150, 232);
+    background-color: #45C4B0;
     width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: aliceblue;
+    color: whitesmoke;
+
 }
 
 .cronometro, .btns {
@@ -15,7 +16,7 @@ body {
 }
 
 #btnStart, #btnPause, #btnClean {
-    background-color: rgb(141, 150, 232);
+    background-color: #45C4B0;
     border: none;
 }
 
@@ -26,7 +27,7 @@ span {
     z-index: +2;
 }
 
-#sss {
+#div-bg {
     position: absolute;
     font-size: 100px;
     margin-top: 60px;
