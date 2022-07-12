@@ -1,32 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./style/main.css" />
-    <title>Imm Mobi | Login</title>
+    <script src="./app/script.js" defer></script>
+    <title>Sign in & Sign up Form</title>
   </head>
   <body>
-    <div class="container">
+   <header>
+      <div id="logo-container">
+        <a href="./index.html"><p>ImmOn</p> </a>
+      </div>
+      <ul>
+        <li><a href="./about.html">Sobre nós</a></li>
+        <li><a  href="./login.html">Login</a></li>
+      </ul>
+    </header>
+    <main class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form action="" class="sign-in-form">
-            <h2 class="title">Sign in</h2>
-            <div class="input-fild">
-              <!-- <img src="./images/3d-fluency-lock-1.png" alt="" /> -->
+          <form action="#" class="sign-in-form">
+            <h2 class="title">Login</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
               <input type="text" placeholder="Usuário" />
             </div>
-            <div class="input-fild">
-              <!-- <img src="./images/3d-fluency-lock-1.png" alt="" /> -->
-              <input type="password" placeholder="Senha"  />
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Senha" />
             </div>
-            <input type="submit" value="Login" class="btn solid">
-
-            <p class="social-text">Or Sign in with social plataforms</p>
+            <input type="submit" value="Login" class="btn solid" />
+            <p class="social-text">Faça o login com suas redes sociais</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
           </form>
+          
         </div>
       </div>
-    </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>Novo por aqui?</h3>
+            <p>Cadastre-se e vote no nosso próximo empreendimento!</p>
+            <button class="btn transparent" id="sign-up-btn">
+              Cadastre-se
+            </button>
+          </div>
+          <img src="img/log.svg" class="image" alt="" />
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>Já tem cadastro?</h3>
+            <p>Entre e vote no nosso próximo empreendimento!</p>
+            <button class="btn transparent" id="sign-in-btn">Login</button>
+          </div>
+          <img src="img/register.svg" class="image" alt="" />
+        </div>
+      </div>
+    </main>
   </body>
 </html>

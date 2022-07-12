@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+.title {
+    width: 50vw;
+  font-size: 2.2rem;
+  color: #444;
+  margin-bottom: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: -8%;
+  left: 140%;
+}
+
+.forms-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  align-items: center;
+}
+
+.input-field {
+  max-width: 380px;
+  width: 100%;
+  background-color: #f0f0f0;
+  margin: 10px 0;
+  height: 55px;
+  border-radius: 55px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 0 0.4rem;
+  position: relative;
+}
+
+.input-field i {
+  text-align: center;
+  line-height: 55px;
+  color: #acacac;
+  transition: 0.5s;
+  font-size: 1.1rem;
+}
+
+.input-field input {
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.input-field input::placeholder {
+  color: #aaa;
+  font-weight: 500;
+}
+
+.social-text {
+  padding: 0.7rem 0;
+  font-size: 1rem;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon {
+  height: 46px;
+  width: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0.45rem;
+  color: #333;
+  border-radius: 50%;
+  border: 2px solid #333;
+  text-decoration: none;
+  font-size: 1.7rem;
+  transition: 0.3s;
+}
+
+.social-icon:hover {
+  color: #4481eb;
+  border: 2px solid #4481eb;
+}
+
+.btn {
+  width: 150px;
+  background-color: #5995fd;
+  /* border: none; */
+  border: 2px solid #4d84e2;
+  outline: none;
+  height: 49px;
+  border-radius: 49px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 100px 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  /* background-color: #4d84e2; */
+  background-color: #fff;
+  border: 2px solid #4d84e2;
+  color: #4d84e2;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  /* position: absolute;  */
+}
+
+.first {
+  width: 50vw;
+  height: 100vh;
+  background-color: #4481eb;
+}
+
+.second {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  width: 50vw;
+  height: 100vh;
+  /* background-color: black; */
+  position: relative;
+}
+
+form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
