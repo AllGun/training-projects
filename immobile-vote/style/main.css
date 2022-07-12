@@ -14,7 +14,7 @@ input {
 header {
     display: flex;
     position: absolute;
-    justify-content:;
+    /* justify-content:; */
     z-index: 999;
     background: transparent;
 }
